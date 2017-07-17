@@ -10,37 +10,43 @@
 
     <title>Tutor Registration</title>
 
-
     <link
             href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
             rel="stylesheet"
             integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
             crossorigin="anonymous"/>
-
+    <link
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u">
     <link th:href="@{css/style.css}" rel="stylesheet"/>
+    <link rel="stylesheet" href="../static/css/bootstrap-multiselect.css">
+
 </head>
 <nav class="navbar navbar-default">
     <div id="navBar">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#"><img th:src="@{/images/logo.png/}" width="100px" height="100px"/></a>
+            <a class="navbar-brand" href="#"><img th:src="@{/images/logo.png/}" width="250px" height="200px" class="logo"/></a>
         </div>
+        <div class ="navBarText">
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li><a href="#">Home</a></li>
-                <li class="active"><a href="#" class="color-me">Tutor</a></li>
+                <li class="active"><a href="#">Tutor</a></li>
                 <li><a href="#">Books</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right" id="navbarRight">
                 <li><a href="">Login/Register</a></li>
             </ul>
         </div>
+        </div>
 
     </div>
 
 </nav>
 <body class="gray-bg">
-
-<div class="middle-box text-center loginscreen animated fadeInDown">
+<div class="container">
+<div class="middle-box text-center loginscreen animated fadeInDown" id="tutorForm">
     <div>
 
         <hr/>
@@ -109,7 +115,32 @@
                       aria-hidden="true"></span>
 
             </div>
+            <div class="form-group input-group has-feedback">
+                 <span class="input-group-addon">
+            <span class="glyphicon glyphicon-list-alt"></span>
+          </span>
+                <select id="subjects" multiple="multiple" style="width: 100%">
 
+                    <option>Maths</option>
+                    <option>Engineering</option>
+                    <option>Maths1</option>
+                    <option>Engineering1</option>
+                    <option>Maths2</option>
+                    <option>Engineering2</option>
+                    <option>Math3s</option>
+                    <option>Engineering3</option>
+                </select>
+            </div>
+            <div class="form-group input-group has-feedback">
+          <span class="input-group-addon">
+            <span class="glyphicon glyphicon-qrcode"></span>
+          </span>
+
+                <input type="text"
+                       placeholder="Referal Code (Optional)" class="form-control"/>
+                <span class="glyphicon form-control-feedback"
+                      aria-hidden="true"></span>
+            </div>
 
             <button type="submit"
                     class="btn btn-primary block full-width m-b">Register
@@ -121,6 +152,10 @@
         </p>
     </div>
 </div>
+</div>
+<hr>
+
+Footer will go here
 
 
 <script
@@ -130,7 +165,21 @@
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.min.js"></script>
+<script>
+    $(document).ready(function() {
 
+        $('#subjects').multiselect({
+
+            buttonWidth: '100%',
+            nonSelectedText:'Subjects',
+
+        });
+
+
+    });
+
+</script>
 
 </body>
 

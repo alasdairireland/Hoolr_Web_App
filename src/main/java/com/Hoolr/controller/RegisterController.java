@@ -80,10 +80,10 @@ public class RegisterController {
 			registrationEmail.setSubject("Registration Confirmation");
 			registrationEmail.setText("To confirm your e-mail address, please click the link below:\n"
 					+ appUrl + "/confirm?token=" + user.getConfirmationToken());
-			registrationEmail.setFrom("noreply@domain.com");
+			registrationEmail.setFrom("noreply@Hoolr.com");
 			
 			emailService.sendEmail(registrationEmail);
-			
+			System.out.println(registrationEmail);
 			modelAndView.addObject("confirmationMessage", "A confirmation e-mail has been sent to " + user.getEmail());
 			modelAndView.setViewName("register");
 		}
@@ -117,7 +117,7 @@ public class RegisterController {
 		
 		Strength strength = passwordCheck.measure(requestParams.get("password"));
 		
-		if (strength.getScore() < 3) {
+		if (strength.getScore() < 2) {
 
 			bindingResult.reject("password");
 			
