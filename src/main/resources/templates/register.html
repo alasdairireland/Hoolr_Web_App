@@ -15,12 +15,12 @@
             rel="stylesheet"
             integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
             crossorigin="anonymous"/>
-    <link
-            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u">
     <link th:href="@{css/style.css}" rel="stylesheet"/>
-    <link rel="stylesheet" href="../static/css/bootstrap-multiselect.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.3/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+
 
 </head>
 <nav class="navbar navbar-default">
@@ -126,16 +126,15 @@
                  <span class="input-group-addon">
             <span class="glyphicon glyphicon-list-alt"></span>
           </span>
-                    <select id="subjects" multiple="multiple" style="width: 100%">
-
+                    <select class="selectpicker" multiple data-live-search="true"
+                            data-live-search-placeholder="Start typing to find subjects" data-actions-box="true"
+                            title="Subjects">
                         <option>Maths</option>
-                        <option>Engineering</option>
-                        <option>Maths1</option>
-                        <option>Engineering1</option>
-                        <option>Maths2</option>
-                        <option>Engineering2</option>
-                        <option>Math3s</option>
-                        <option>Engineering3</option>
+                        <option>English</option>
+                        <option>Physics</option>
+                        <option>option4</option>
+                        </optgroup>
+
                     </select>
                 </div>
                 <div class="form-group input-group has-feedback">
@@ -154,13 +153,12 @@
                 </button>
 
             </form>
-            <p class="m-t">
-
-            </p>
         </div>
+        <hr>
+
+
     </div>
 </div>
-<hr>
 
 <footer class="footer-distributed">
 
@@ -228,23 +226,12 @@
 
 <script
         src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script
-        src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.3/js/bootstrap-select.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.min.js"></script>
+
 <script>
     $(document).ready(function () {
-
-        $('#subjects').multiselect({
-
-            buttonWidth: '100%',
-            nonSelectedText: 'Subjects',
-
-        });
-
-
     });
 
 </script>

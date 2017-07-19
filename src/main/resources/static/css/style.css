@@ -1,7 +1,7 @@
 
 html * {
 
-    font-family: "Muli";
+    font-family: 'Montserrat';
 }
 
 nav.navbar.navbar-default {
@@ -267,6 +267,12 @@ ul.nav a:hover {
 
     padding-left: 5px !important;
     color: #999999;
+
+}
+
+.bootstrap-select.btn-group {
+
+    width: 300px;!important;
 
 }
 

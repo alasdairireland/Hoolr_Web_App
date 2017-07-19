@@ -45,7 +45,6 @@ public class RegisterController {
 		modelAndView.setViewName("register");
 		return modelAndView;
 	}
-	
 
 	@RequestMapping(value = "/register", method = RequestMethod.POST)
 	public ModelAndView processRegistrationForm(ModelAndView modelAndView, @Valid User user, BindingResult bindingResult, HttpServletRequest request) {
